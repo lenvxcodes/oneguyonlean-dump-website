@@ -5,5 +5,5 @@ Skid made his website IN AI LMFAOAOAOA
 - his AI code will traumatize you
 # Hosted in my responsitory
 - https://oneguyonlean-dump-website.netlify.app/
-# His own hosted website
+# His website, that i dumped from. (Closed-Source, imagineeeee)
 - https://deluxe-peony-54a50a.netlify.app/
