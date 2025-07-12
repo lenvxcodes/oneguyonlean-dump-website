@@ -1,0 +1,271 @@
+:root {
+  --primary: #000000;
+  --secondary: #ff0000;
+  --accent: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--primary);
+  color: var(--accent);
+}
+
+body, html {
+  height: 100%;
+}
+
+a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: var(--primary);
+  border-bottom: 2px solid var(--secondary);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--secondary);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background-color: var(--secondary);
+  color: var(--accent);
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.home-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid var(--secondary);
+  border-radius: 10px;
+  padding: 1rem;
+  min-width: 280px;
+  max-width: 320px;
+  gap: 1rem;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid var(--secondary);
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  color: var(--accent);
+  text-align: center;
+  min-width: 160px;
+}
+
+.name {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.timezone {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.github-link {
+  color: var(--secondary);
+  font-weight: 600;
+  margin-top: 0.3rem;
+  transition: color 0.3s ease;
+}
+
+.github-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.status-box {
+  border: 2px solid var(--secondary);
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  color: var(--secondary);
+  font-size: 1.1rem;
+  min-width: 140px;
+  background-color: transparent;
+  user-select: none;
+  white-space: pre-line;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.banner-wrapper {
+  width: 100%;
+  max-width: 800px;
+}
+
+.banner {
+  width: 100%;
+  border-radius: 10px;
+  border: 3px solid var(--secondary);
+  object-fit: contain;
+}
+
+.about {
+  max-width: 650px;
+  margin: 1rem auto 0 auto;
+  font-size: 1.1rem;
+  color: var(--accent);
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 0.7rem;
+  color: var(--secondary);
+}
+
+/* PAGE TITLES */
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+  text-align: center;
+  font-weight: 700;
+}
+
+.page-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+/* PROJECTS & PLUGINS LISTS */
+.project-list,
+.plugin-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card,
+.plugin-card {
+  background: #111;
+  padding: 1.2rem 1rem;
+  border-radius: 10px;
+  border: 2px solid var(--secondary);
+  box-shadow: 0 2px 6px rgba(255, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover,
+.plugin-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.6);
+}
+
+.project-card h2,
+.plugin-card h2 {
+  margin-bottom: 0.6rem;
+  color: var(--secondary);
+}
+
+.project-card p,
+.plugin-card p {
+  font-size: 1rem;
+  color: var(--accent);
+  line-height: 1.3;
+}
+
+.plugin-card img {
+  margin-top: 0.8rem;
+  width: 100%;
+  border-radius: 8px;
+  border: 1.5px solid var(--secondary);
+  object-fit: cover;
+}
+
+.plugin-card video {
+  margin-top: 0.8rem;
+  width: 100%;
+  border-radius: 8px;
+  border: 1.5px solid var(--secondary);
+  background: #000;
+}
+
+/* ANIMATIONS */
+.fade-in {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (min-width: 720px) {
+  .home-content {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .profile-wrapper {
+    max-width: 320px;
+  }
+  .status-box {
+    min-width: 160px;
+  }
+  .profile-info {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  .status-box {
+    font-size: 0.95rem;
+    min-width: 120px;
+  }
+}
